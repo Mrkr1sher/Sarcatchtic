@@ -14,4 +14,4 @@ def handleInput():
     return "Nothing" #proccessor.process(request.form['input'])
     
 if __name__ == "__main__":
-    app.run(ssl_context=('/etc/letsencrypt/live/example.com/fullchain.pem', '/etc/letsencrypt/live/example.com/privkey.pem'))
+    app.run(ssl_context=('/etc/letsencrypt/live/teandfriends.rocks/fullchain.pem', '/etc/letsencrypt/live/teandfriends.rocks/privkey.pem'))
