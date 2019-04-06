@@ -9,22 +9,22 @@
 	}
 
 	// This inserts an html file
-	var iframe  = document.createElement ('iframe');
-	iframe.src  = chrome.extension.getURL ('template.html');
-	document.getElementById('p').insertBefore(iframe);
+	// var iframe  = document.createElement ('iframe');
+	// iframe.src  = chrome.extension.getURL ('template.html');
+	// document.getElementById('p').insertBefore(iframe);
 
-	// fetch(chrome.extension.getURL('template.html'))
-  //   .then(response => response.text())
-  //   .then(data => {
-	// 			var allParas = document.getElementsByTagName('h1');
-	// 			var num = allParas[0];
-  //       document.body.innerHTML = document.body.innerHTML + data;
-  //       // other code
-  //       // eg update injected elements,
-  //       // add event listeners or logic to connect to other parts of the app
-  //   }).catch(err => {
-  //       // handle error
-  //   });
+	fetch(chrome.extension.getURL('template.html'))
+    .then(response => response.text())
+    .then(data => {
+				var allParas = document.getElementsByTagName('h1');
+				var num = allParas[0];
+        document.body.innerHTML = document.body.innerHTML + data;
+        // other code
+        // eg update injected elements,
+        // add event listeners or logic to connect to other parts of the app
+    }).catch(err => {
+        // handle error
+    });
 
 	// just place a div at top right
 	var div = document.createElement('p');
