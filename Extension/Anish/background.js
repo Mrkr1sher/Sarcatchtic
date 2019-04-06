@@ -7,14 +7,14 @@ chrome.browserAction.onClicked.addListener(function (currentTab) {
 
 	var url;
 
-	alert("something happened")
+	// alert("something happened")
 
 	chrome.tabs.getSelected(null, function(tab) {
 		handleStuff(tab.url, currentTab);
 	})
-	
 
-	
+
+
 });
 
 function handleStuff(tablink, currentTab){
