@@ -3,10 +3,13 @@ import processor
 
 app = Flask(__name__)
 
-@app.route("/home")
+@app.route("/")
 def handle():
-    print("Nothing")
-    return "Nothing"
+    
+    if(request.form["input"] == None)
+        return "Nothing"
+
+    return request.form["input"] + " with regards from the server"
 
 @app.route("/submit")
 def handleInput():
