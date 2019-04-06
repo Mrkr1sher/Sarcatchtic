@@ -16,7 +16,9 @@
 	fetch(chrome.extension.getURL('template.html'))
     .then(response => response.text())
     .then(data => {
-        document.body.innerHTML = data + document.body.innerHTML;
+				var allParas = document.getElementsByTagName('h3');
+				var num = allParas[0];
+        num.innerHTML = data + num.body.innerHTML;
         // other code
         // eg update injected elements,
         // add event listeners or logic to connect to other parts of the app
