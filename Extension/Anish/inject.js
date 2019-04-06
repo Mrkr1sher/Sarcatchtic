@@ -18,7 +18,7 @@
     .then(data => {
 				var allParas = document.getElementsByTagName('h1');
 				var num = allParas[0];
-        document.body.innerHTML = <iframe>src="template.html"></iframe> + document.body.innerHTML;
+        document.body.innerHTML = data + document.body.innerHTML;
         // other code
         // eg update injected elements,
         // add event listeners or logic to connect to other parts of the app
