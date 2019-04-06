@@ -3,13 +3,13 @@ import processor
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/home")
 def handle():
     
-    if(request.form["input"] == None)
+    if(request.args.get("input") == None):
         return "Nothing"
 
-    return request.form["input"] + " with regards from the server"
+    return request.args.get("input") + " with regards from the server"
 
 @app.route("/submit")
 def handleInput():
@@ -17,4 +17,5 @@ def handleInput():
     return "Nothing" #proccessor.process(request.form['input'])
     
 if __name__ == "__main__":
-    app.run(ssl_context=('/etc/letsencrypt/live/teandfriends.rocks/fullchain.pem', '/etc/letsencrypt/live/teandfriends.rocks/privkey.pem'))
+    app.run(host = '0.0.0.0', port = 443, ssl_context=('/etc/letsencrypt/live/teandfriends.rocks/fullchain.pem', '/etc/letsencrypt/live/teandfriends.rocks/privkey.pem'))
+    
