@@ -1,6 +1,8 @@
 // this is the code which will be injected into a given page...
 
 
+var outsideList;
+
 (function() {
 
 	var ele = document.getElementById("anishimage");
@@ -10,22 +12,11 @@
 	}
 
 	var typingTimer;
-	var doneTypingTimer = 2000;
+	var doneTypingTimer = 1000;
 
-
-	// just place a div at top right
-	var div = document.createElement('p');
-	div.style.position = 'fixed';
-	div.style.bottom = 0;
-	div.style.left = 0;
-	div.id = "anishimage"
-	
-	div.textContent = "Whatever can be inserted in"
-	
-	document.body.appendChild(div);
-	div.style.zIndex = 100;
 
 	var textAreaList = document.getElementsByTagName("textarea");
+	outsideList = textAreaList;
 
 	for(var i = 0; i < textAreaList.length;i++){
 
@@ -33,7 +24,9 @@
 				if(typingTimer != undefined){
 					clearTimeout(typingTimer)
 				}
-				typingTimer = setTimeout(submitInput, doneTypingTimer)	
+				typingTimer = setTimeout(function(){
+					submitInput(i);
+				},doneTypingTimer)
 
 		};
 
@@ -41,6 +34,30 @@
 
 })();
 
-function submitInput (){
-	alert("Timer ended");
-}
+function submitInput (textAreaNumber){
+
+	textArea = outsideList[textAreaNumber - 1]
+
+	var http = new XMLHttpRequest();
+	var url = 'https://teandfriends.rocks/home';
+	var parms = '?input=' + textArea.value;
+
+	http.open("GET",url + parms, true)
+
+	http.send(null)
+
+	var iframe  = document.createElement ('iframe');
+    iframe.classList.add('relative');
+    relative = document.createElement('style');
+    relative.innerHTML = '.relative {position: fixed;top: 20px;right: 20px;width: 260px;height: 145px;z-index: 999;background: #008080;}';
+    document.body.appendChild(relative);
+    iframe.src  = chrome.extension.getURL ('box.html');
+	document.body.insertBefore(iframe, document.body.getElementsByTagName('p')[3]);
+	
+	//alert(iframe.childNodes	)
+
+	iframe.getElementById("feedback").value = "adwasd"
+
+
+	
+}	
