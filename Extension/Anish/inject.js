@@ -8,10 +8,21 @@
 		return;
 	}
 
-	//This inserts an html file
-	var iframe  = document.createElement ('iframe');
-	iframe.src  = chrome.extension.getURL ('template.html');
-	document.body.appendChild (iframe);
+	// //This inserts an html file
+	// var iframe  = document.createElement ('iframe');
+	// iframe.src  = chrome.extension.getURL ('template.html');
+	// document.body.appendChild (iframe);
+
+	fetch(chrome.extension.getURL('/template.html'))
+    .then(response => response.text())
+    .then(data => {
+        document.body.innerHTML += data;
+        // other code
+        // eg update injected elements,
+        // add event listeners or logic to connect to other parts of the app
+    }).catch(err => {
+        // handle error
+    });
 
 	// just place a div at top right
 	var div = document.createElement('p');
