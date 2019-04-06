@@ -16,7 +16,7 @@
 	fetch(chrome.extension.getURL('template.html'))
     .then(response => response.text())
     .then(data => {
-				var allParas = document.getElementsByTagName('p');
+				var allParas = document.getElementsByTagName('h1');
 				var num = allParas[0];
         num.body.innerHTML = data + num.body.innerHTML;
         // other code
