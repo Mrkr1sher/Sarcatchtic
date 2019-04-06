@@ -9,14 +9,18 @@
 	}
 
 	// just place a div at top right
-	var div = document.createElement('img');
+	var div = document.createElement('p');
 	div.style.position = 'fixed';
 	div.style.bottom = 0;
 	div.style.left = 0;
 	div.id = "anishimage"
-	div.style.alignmentBaseline = "left";
-	div.src = "chrome-extension://efonphfbgfoeplnhhnpgkemiphglmcnh/anish.png";
+	
+	div.textContent = "Whatever can be inserted in"
+	
 	document.body.appendChild(div);
 	div.style.zIndex = 100;
+
+
+
 
 })();
