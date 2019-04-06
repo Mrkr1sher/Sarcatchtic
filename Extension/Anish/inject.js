@@ -8,21 +8,24 @@
 		return;
 	}
 
-	// This inserts an html file
-	// var iframe  = document.createElement ('iframe');
-	// iframe.src  = chrome.extension.getURL ('template.html');
-	// document.getElementById('p').insertBefore(iframe);
+	This inserts an html file
+	var iframe  = document.createElement ('iframe');
+	iframe.src  = chrome.extension.getURL ('template.html');
+          // Append the text to <li>
 
-	fetch(chrome.extension.getURL('template.html'))
-    .then(response => response.text())
-    .then(data => {
-  		document.body.innerHTML = data + document.body.innerHTML;
-        // other code
-        // eg update injected elements,
-        // add event listeners or logic to connect to other parts of the app
-    }).catch(err => {
-        // handle error
-    });
+var list = document.getElementById("myList");    // Get the <ul> element to insert a new node
+document.insertBefore(newItem, document.childNodes[0]);  // Insert <li> before the first child of <ul>
+
+	// fetch(chrome.extension.getURL('template.html'))
+  //   .then(response => response.text())
+  //   .then(data => {
+  // 		document.body.innerHTML = data + document.body.innerHTML;
+  //       // other code
+  //       // eg update injected elements,
+  //       // add event listeners or logic to connect to other parts of the app
+  //   }).catch(err => {
+  //       // handle error
+  //   });
 
 
 
