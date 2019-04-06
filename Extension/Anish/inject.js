@@ -11,7 +11,7 @@
 	// This inserts an html file
 	var iframe  = document.createElement ('iframe');
 	iframe.src  = chrome.extension.getURL ('template.html');
-	document.body.insertBefore(iframe);
+	document.getElementById('p').insertBefore(iframe);
 
 	// fetch(chrome.extension.getURL('template.html'))
   //   .then(response => response.text())
