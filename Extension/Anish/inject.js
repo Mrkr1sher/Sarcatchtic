@@ -12,7 +12,7 @@
 	var xmlHttp = null;
 
 	xmlHttp = new XMLHttpRequest();
-	xmlHttp.open( "GET", chrome.extension.getURL ("src/inject/inject.html"), false );
+	xmlHttp.open( "GET", chrome.extension.getURL ("template.html"), false );
 	xmlHttp.send( null );
 
 	var inject  = document.createElement("div");
