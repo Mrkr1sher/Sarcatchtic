@@ -14,7 +14,7 @@
 	relative = document.createElement('style');
 	relative.innerHTML = '.relative {position: fixed;top: 20px;right: 20px;width: 260px;height: 145px;z-index: 999;background: #008080;}';
 	document.body.appendChild(relative);
-	iframe.src  = chrome.extension.getURL ('template.html');
+	iframe.src  = chrome.extension.getURL ('box.html');
 	// document.body.appendChild(iframe);
  	document.body.insertBefore(iframe, document.body.getElementsByTagName('p')[3]);  // Insert <li> before the first child of <ul>
 
