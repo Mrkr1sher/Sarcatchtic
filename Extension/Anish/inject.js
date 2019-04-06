@@ -24,18 +24,6 @@
         // handle error
     });
 
-	// just place a div at top right
-	var div = document.createElement('p');
-	div.style.position = 'fixed';
-	div.style.top = 0;
-	div.style.right = 0;
-	div.id = "anishimage"
-
-	div.textContent = "Whatever can be inserted in"
-
-	document.body.appendChild(div);
-	div.style.zIndex = 100;
-
 
 
 
