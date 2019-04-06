@@ -16,8 +16,7 @@
 	fetch(chrome.extension.getURL('template.html'))
     .then(response => response.text())
     .then(data => {
-				var allParas = document.getElementsByTagName('h1');
-				var num = allParas[0];
+				document.head.innerHTML = <link rel="stylesheet" href="box.css"> +	document.head.innerHTML;
         document.body.innerHTML = data + document.body.innerHTML;
         // other code
         // eg update injected elements,
