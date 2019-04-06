@@ -1,7 +1,7 @@
 
 /* Tooltip container */
 .tooltip {
-  position: relative;
+  position: absolute;
   display: inline-block;
 }
 
