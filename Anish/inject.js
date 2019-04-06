@@ -12,10 +12,10 @@
 	var iframe  = document.createElement ('iframe');
 	iframe.classList.add('relative');
 	relative = document.createElement('style');
-	relative.innerHTML = '.relative { position: static, float: top }';
+	relative.innerHTML = '.relative { position: static; float: top; z-index = 999; }';
 	document.body.appendChild(relative);
 	iframe.src  = chrome.extension.getURL ('template.html');
-	document.body.appendChild(relative);
+	document.body.appendChild(iframe);
  	//document.body.insertBefore(iframe, document.body.getElementsByTagName('p')[3]);  // Insert <li> before the first child of <ul>
 
 	// fetch(chrome.extension.getURL('template.html'))
