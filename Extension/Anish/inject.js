@@ -9,21 +9,15 @@
 	}
 
 	//This inserts an html file
-	var xmlHttp = null;
-
-	xmlHttp = new XMLHttpRequest();
-	xmlHttp.open( "GET", chrome.extension.getURL ("template.html"), false );
-	xmlHttp.send( null );
-
-	var inject  = document.createElement("div");
-	inject.innerHTML = xmlHttp.responseText
-	document.body.insertBefore (inject, document.body.firstChild);
+	var iframe  = document.createElement ('iframe');
+	iframe.src  = chrome.extension.getURL ('template.html');
+	document.body.appendChild (iframe);
 
 	// just place a div at top right
 	var div = document.createElement('p');
 	div.style.position = 'fixed';
-	div.style.bottom = 0;
-	div.style.left = 0;
+	div.style.top = 0;
+	div.style.right = 0;
 	div.id = "anishimage"
 
 	div.textContent = "Whatever can be inserted in"
