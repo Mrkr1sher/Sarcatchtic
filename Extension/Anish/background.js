@@ -1,6 +1,6 @@
 // this is the background code...
 //print("Code loaded")
-alert("I havxx`x`e loaded")
+// alert("I havxx`x`e loaded")
 
 chrome.browserAction.onClicked.addListener(function (currentTab) {
 	// for the current tab, inject the "inject.js" file & execute it
