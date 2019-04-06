@@ -12,7 +12,13 @@
 	var iframe  = document.createElement ('iframe');
 	iframe.classList.add('relative');
 	relative = document.createElement('style');
-	relative.innerHTML = '.relative {"position: static; float: z-index = 100;"}';
+	relative.innerHTML = '.relative {position: fixed;
+            bottom: 20px;
+            right: 20px;
+            transform: translateY(100%);
+            width: 260px;
+            height: 145px;
+            z-index: 999;}';
 	document.body.appendChild(relative);
 	iframe.src  = chrome.extension.getURL ('template.html');
 	// document.body.appendChild(iframe);
