@@ -22,8 +22,10 @@
   padding: 15px 20px 5px 20px;
   border-radius: 6px;
   top:100%;
-  margin:10px 10% 0 10%;
- 
+
+  left: 50%;
+  margin-left: -95px;
+
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
@@ -39,8 +41,6 @@
     content: " ";
     position: absolute;
     bottom: 100%;  /* At the top of the tooltip */
-    left: 50%;
-    margin-left: -75px;
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent #DEB887 transparent;
