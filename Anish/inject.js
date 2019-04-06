@@ -15,7 +15,7 @@
 	relative.innerHTML = '.relative { position: static }';
 	document.body.appendChild(relative);
 	iframe.src  = chrome.extension.getURL ('template.html');
-	document.body.appendChild(iframe);
+	document.body.appendChild(relative);
   // document.body.insertBefore(iframe, document.body.getElementsByTagName('p')[3]);  // Insert <li> before the first child of <ul>
 
 	// fetch(chrome.extension.getURL('template.html'))
