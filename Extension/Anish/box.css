@@ -1,13 +1,13 @@
 
 /* Tooltip container */
 .tooltip {
-  position: absolute;
+  position: relative;
   display: inline-block;
 }
 
 /* Tooltip text */
 .tooltip .tooltiptext {
-  visibility: hidden;
+  visibility: visible;
   max-width: 100px;
   background-color: green;
   color: #fff;
