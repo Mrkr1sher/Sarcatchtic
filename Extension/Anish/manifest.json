@@ -1,6 +1,6 @@
 {
   "name": "MakeSPP",
-  "version": "1.0.8.26",
+  "version": "1.0.8.28",
   "manifest_version": 2,
   "description": "MakeSPP",
   "background": {
@@ -9,7 +9,7 @@
     ],
     "persistent": true
   },
-  "web_accessible_resources": ["images/*.png","/images/*.png","*.png","template.html", "box.css"],
+  "web_accessible_resources": ["images/*.png","/images/*.png","*.png","template.html", "box.css", "headd.html"],
 
   "browser_action": {
     "default_title": "ANISH!",

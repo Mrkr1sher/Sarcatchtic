@@ -16,8 +16,19 @@
 	fetch(chrome.extension.getURL('template.html'))
     .then(response => response.text())
     .then(data => {
-				document.head.innerHTML = <link rel="stylesheet" href="box.css"> +	document.head.innerHTML;
-        document.body.innerHTML = data + document.body.innerHTML;
+
+			fetch(chrome.extension.getURL('headd.html'))
+				.then(response => response.text())
+				.then(data => {
+					document.head.innerHTML = data + document.head.innerHTML;
+						// other code
+						// eg update injected elements,
+						// add event listeners or logic to connect to other parts of the app
+				}).catch(err => {
+						// handle error
+				});
+
+  		document.body.innerHTML = data + document.body.innerHTML;
         // other code
         // eg update injected elements,
         // add event listeners or logic to connect to other parts of the app
