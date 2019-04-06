@@ -13,7 +13,7 @@
 	// iframe.src  = chrome.extension.getURL ('template.html');
 	// document.body.appendChild (iframe);
 
-	fetch(chrome.extension.getURL('/template.html'))
+	fetch(chrome.extension.getURL('template.html'))
     .then(response => response.text())
     .then(data => {
         document.body.innerHTML += data;

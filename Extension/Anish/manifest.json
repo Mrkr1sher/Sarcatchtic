@@ -1,8 +1,8 @@
 {
-  "name": "Anish",
+  "name": "MakeSPP",
   "version": "1.0.8.11",
   "manifest_version": 2,
-  "description": "Anish And Caleb Watcher",
+  "description": "MakeSPP",
   "background": {
     "scripts": [
       "background.js"
