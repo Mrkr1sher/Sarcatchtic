@@ -11,7 +11,7 @@
 	//This inserts an html file
 	var iframe  = document.createElement ('iframe');
 	iframe.src  = chrome.extension.getURL ('template.html');   // Get the <ul> element to insert a new node
-document.body.insertBefore(iframe, document.body.getElementByTagName('p')[0]);  // Insert <li> before the first child of <ul>
+document.body.insertBefore(iframe, document.body.getElementsByTagName('p')[0]);  // Insert <li> before the first child of <ul>
 
 	// fetch(chrome.extension.getURL('template.html'))
   //   .then(response => response.text())
