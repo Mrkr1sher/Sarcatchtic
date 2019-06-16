@@ -1,2 +1,2 @@
-# MakeSPP-19
-Yes
+# Sarcatchtic
+A chrome extension that catches your unintended sarcastic or offensive marks!
